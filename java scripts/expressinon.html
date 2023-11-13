@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ID=0;
+        var seconds=0;
+        function printmsg(){
+            document.getElementById("sec").innerHTML=seconds+"seconds";seconds++;
+        }
+        function start(){
+            ID=window.setInterval(printmsg,1000);
+        }
+        function stop(){
+            window.clearInterval(ID);
+        }
+    </script>
+</head>
+<body>
+<button onclick="start()" id="sta">Start</button>
+<h2 id="sec">Seconds</h2>
+<button onclick="stop()" id="sto">Stop</button>
+    
+</body>
+</html>
